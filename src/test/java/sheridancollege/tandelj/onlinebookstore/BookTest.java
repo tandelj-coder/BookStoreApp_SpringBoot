@@ -15,4 +15,11 @@ public class BookTest {
         bookList.addBook(book);
         assertEquals(1, bookList.getBooks().size());
     }
+
+    @Test
+    public void testBookPrice() {
+        Book book = new Book();
+        book.setBookPrice(12.0);
+        assertEquals(12.0, book.getBookPrice());
+    }
 }
