@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Home - Jigar's Online Book Store</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<!-- Header Fragment -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- Page Content -->
+<h2 th:text="${message}">Welcome to Jigar's Online Book Store!</h2>
+<img src="/images/bookstore.jpg" alt="Bookstore Image" width="500">
+
+<!-- Footer Fragment -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
