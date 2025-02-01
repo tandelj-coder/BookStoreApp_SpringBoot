@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 public class BookCartList {
-    private List<Book> cartItems = new ArrayList<>();
+    private final List<Book> cartItems = new ArrayList<>();
 
     public void addToCart(Book book) {
         cartItems.add(book);
