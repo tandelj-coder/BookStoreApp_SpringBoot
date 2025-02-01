@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Checkout - Jigar's Online Book Store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<!-- Header Fragment -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- Page Content -->
+<h2>Checkout</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${cartItems}">
+        <td th:text="${item.bookISBN}">960518</td>
+        <td th:text="${item.bookTitle}">Introduction to Java Language</td>
+        <td th:text="${item.bookAuthor}">Kathy Sierra and Bert Bates</td>
+        <td th:text="${item.bookPrice}">12.0</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Total: $<span th:text="${total}">0.00</span></h3>
+
+<!-- Footer Fragment -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
